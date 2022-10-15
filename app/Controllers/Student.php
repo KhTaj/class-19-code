@@ -16,18 +16,30 @@ class Student{
         $_SESSION['message'] = 'Successfully Created';
         }
 
-
-    public function destroy($id){
-
+        public function details($id)
+        {
+            // echo '<pre>';
+            // print_r($_SESSION['students']);
+            
         $students = $_SESSION['students'];
-
-foreach ($students as $key => $student){
-    if($student['id'] == $id) {
-        unset($_SESSION['students'][$key]);
+        $studentInfo = null;
+        foreach ($students as $key => $student){
+        if($student['id'] == $id) {
+        $studentInfo = $_SESSION['students'][$key];
     }
 }
-    $_SESSION['message'] = 'Successfully Deleted';
+    return $studentInfo;
 
+    }
+
+    public function destroy($id){
+        $students = $_SESSION['students'];
+        foreach ($students as $key => $student) {
+            if($student['id'] == $id){
+                unset($_SESSION['students'][$key]);
+            }
+        }
+        $_SESSION['message'] = 'Successfully Deleted';
     }
 
 
