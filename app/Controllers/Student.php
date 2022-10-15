@@ -13,6 +13,7 @@ class Student{
     public function store($data){
         // session_start();      
         $_SESSION['students'][] = $data;
+        $_SESSION['message'] = 'Successfully Created';
         }
 
 
