@@ -30,7 +30,7 @@
         }
         echo $_SESSION['message'] ?? null;
     ?>
-
+<a href="./create.php">Create</a>
     <table border="1" style="width: 100%;" >
         <thead>
             <tr>

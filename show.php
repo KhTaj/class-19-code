@@ -7,6 +7,8 @@ print_r($studentInfo);
 
 ?>
 
+<a href="./index.php">List</a>
+
 <h1>Detail Info</h1>
 <p>Student Id: <?= $studentInfo['id'] ?></p>
 <p>Name: <?= $studentInfo['name'] ?></p>
