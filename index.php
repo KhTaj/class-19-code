@@ -10,7 +10,7 @@
 <?php
     session_start();
     // include_once './store.php';
-    $students = $_SESSION['students'];
+    $students = $_SESSION['students'] ?? [];
 ?>
 
 
@@ -27,6 +27,7 @@
             <tr>
                 <th>ID</th>
                 <th>Name</th>
+                <th>Action</th>
             </tr>
         </thead>
         <tbody>
@@ -39,6 +40,11 @@
                 <tr>
                     <td><?php echo $student['id']?></td>
                     <td><?php echo $student['name']?></td>
+                    <td>
+                        <!-- <a href="#">Edit</a>|
+                        <a href="#">Update</a>| -->
+                        <a href="delete.php?id=<?=$student['id']?>">Delete</a>
+                    </td>
                 </tr>
 
                 <?php }
