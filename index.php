@@ -50,8 +50,8 @@
                     <td><?php echo $student['id']?></td>
                     <td><?php echo $student['name']?></td>
                     <td>
-                        <!-- <a href="#">Edit</a>|
-                        <a href="#">Update</a>| -->
+                        <!-- <a href="#">Edit</a>| -->
+                        <a href="show.php?id=<?=$student['id']?>">Show</a>|
                         <a href="delete.php?id=<?=$student['id']?>">Delete</a>
                     </td>
                 </tr>
