@@ -25,7 +25,7 @@ foreach ($students as $key => $student){
         unset($_SESSION['students'][$key]);
     }
 }
-
+    $_SESSION['message'] = 'Successfully Deleted';
 
     }
 

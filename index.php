@@ -22,6 +22,15 @@
      <button>Add</button>
     </form>
 
+    <?php 
+
+        if(isset($_SESSION['message'])){
+            echo $_SESSION['message'];
+            unset($_SESSION['message']);
+        }
+        echo $_SESSION['message'] ?? null;
+    ?>
+
     <table border="1" style="width: 100%;" >
         <thead>
             <tr>
